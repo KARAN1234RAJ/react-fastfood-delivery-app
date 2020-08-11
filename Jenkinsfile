@@ -4,7 +4,7 @@ pipeline {
         stage('Build Project') {
             steps {
                 echo 'Building Project'
-                sh 'npm install'
+                sh 'make' 
             }
         }
       stage('Archive  Project') {
