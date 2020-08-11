@@ -4,11 +4,13 @@ pipeline {
         stage('Build Project') {
             steps {
                 echo 'Building Project'
+                sh'./mvnw package'
             }
         }
       stage('Archive  Project') {
             steps {
                 echo 'Archiveing Project'
+                archiveArtifacts artifacts: '**/*.jar', followSymlinks: false
             }
         }
       stage('Build Docker Image') {
