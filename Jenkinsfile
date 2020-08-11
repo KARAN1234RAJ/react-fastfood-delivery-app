@@ -4,7 +4,7 @@ pipeline {
         stage('Build Project') {
             steps {
                 echo 'Building Project'
-                sh'./mvnw package'
+                sh 'npm install'
             }
         }
       stage('Archive  Project') {
